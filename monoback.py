@@ -10,13 +10,13 @@ logger = logging.getLogger(__name__)
 
 
 def processFont(ttFont, ratio):
-  if 'CFF ' in ttFont.reader.tables or 'CFF2' in ttFont.reader.tables:
-    raise RuntimeError("OpenType/CFF font is not supported, view https://github.com/Asvel/monoback/issues/1 for detail.")
+  # if 'CFF ' in ttFont.reader.tables or 'CFF2' in ttFont.reader.tables:
+  #   raise RuntimeError("OpenType/CFF font is not supported, view https://github.com/Asvel/monoback/issues/1 for detail.")
 
   halfWidth = round(ttFont['head'].unitsPerEm * ratio)
   fullWidth = round(ttFont['head'].unitsPerEm * ratio * 2)
 
-  fullWidth = 1150
+  fullWidth = 1200
   print("halfWidth:", halfWidth)
   print("fullWidth:", fullWidth)
 

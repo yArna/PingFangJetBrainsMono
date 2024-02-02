@@ -9,4 +9,4 @@ ttc = TTCollection(filename)
 print(sys.argv[1])
 basename = os.path.basename(filename)
 for i, font in enumerate(ttc):
-    font.save(f"otf/{font['name'].getBestFullName()}.otf")
+    font.save(f"raw/ttf/{font['name'].getBestFullName()}.ttf")
